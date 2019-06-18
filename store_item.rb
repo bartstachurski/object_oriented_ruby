@@ -1,3 +1,5 @@
+# Original exercise:
+
 # A. Use the terminal to create a new folder in your actualize folder called object_oriented_ruby.
 # B. Create a new file in the folder called store_item.rb and open it in Sublime.
 # C. Use hashes with symbols to represent the following scenario:
@@ -33,6 +35,7 @@
 
 # p " Bicycle1 is a #{bicycle1[:size]} #{bicycle1[:color]} #{bicycle1[:style]} bike with #{bicycle1[:tire_width]} tires."
 
+# Converted to class:
 
 class Bicycle
   def initialize(input_color, input_size, input_style, input_tire_width, input_price)
@@ -75,3 +78,4 @@ p bicycle1.color
 p bicycle1.price
 p bicycle1.style
 p bicycle1.show_info
+
