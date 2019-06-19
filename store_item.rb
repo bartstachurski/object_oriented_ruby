@@ -35,9 +35,15 @@
 
 # p " Bicycle1 is a #{bicycle1[:size]} #{bicycle1[:color]} #{bicycle1[:style]} bike with #{bicycle1[:tire_width]} tires."
 
-# Converted to class:
+# Converted to class, and then converted the reader methods to use 'attr_reader':
 
 class Bicycle
+  attr_reader :color
+  attr_reader :size
+  attr_reader :style
+  attr_reader :tire_width
+  attr_reader :price
+
   def initialize(input_color, input_size, input_style, input_tire_width, input_price)
     @color = input_color
     @size = input_size
@@ -46,25 +52,25 @@ class Bicycle
     @price = input_price
   end
 
-  def color
-    @color 
-  end
+  # def color
+  #   @color 
+  # end
 
-  def size
-    @size
-  end
+  # def size
+  #   @size
+  # end
 
-  def style
-    @style
-  end
+  # def style
+  #   @style
+  # end
 
-  def tire_width
-    @tire_width
-  end
+  # def tire_width
+  #   @tire_width
+  # end
 
-  def price
-    @price
-  end
+  # def price
+  #   @price
+  # end
 
   def show_info
     "This is a #{@size}, #{@color}, #{style} bike with #{tire_width} mm tires and costs $#{price}."
