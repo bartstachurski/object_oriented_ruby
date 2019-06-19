@@ -53,7 +53,7 @@ class Bicycle
   end
 end
 
-bicycle1 = Bicycle.new(color: "green", size: "large", style: "road", tire_width: "25", price: 500)
+bicycle1 = Bicycle.new(green: "green", size: "large", style: "road", tire_width: "25", price: 500)
 
 p bicycle1.color
 p bicycle1.price
