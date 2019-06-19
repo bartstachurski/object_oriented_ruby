@@ -38,49 +38,24 @@
 # Converted to class, and then converted the reader methods to use 'attr_reader':
 
 class Bicycle
-  attr_reader :color
-  attr_reader :size
-  attr_reader :style
-  attr_reader :tire_width
-  attr_reader :price
+  attr_reader :color, :size, :style, :tire_width, :price
 
-  def initialize(input_color, input_size, input_style, input_tire_width, input_price)
-    @color = input_color
-    @size = input_size
-    @style = input_style
-    @tire_width = input_tire_width
-    @price = input_price
+  def initialize(input_options)
+    @color = input_options[:color]
+    @size = input_options[:size]
+    @style = input_options[:style]
+    @tire_width = input_options[:tire_width]
+    @price = input_options[:price]
   end
-
-  # def color
-  #   @color 
-  # end
-
-  # def size
-  #   @size
-  # end
-
-  # def style
-  #   @style
-  # end
-
-  # def tire_width
-  #   @tire_width
-  # end
-
-  # def price
-  #   @price
-  # end
 
   def show_info
     "This is a #{@size}, #{@color}, #{style} bike with #{tire_width} mm tires and costs $#{price}."
   end
 end
 
-bicycle1 = Bicycle.new("green", "large", "road", "25", 500)
+bicycle1 = Bicycle.new(color: "green", size: "large", style: "road", tire_width: "25", price: 500)
 
 p bicycle1.color
 p bicycle1.price
 p bicycle1.style
 p bicycle1.show_info
-
