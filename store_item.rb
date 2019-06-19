@@ -53,9 +53,23 @@ class Bicycle
   end
 end
 
-bicycle1 = Bicycle.new(green: "green", size: "large", style: "road", tire_width: "25", price: 500)
+class Used_Bicycle < Bicycle
+  attr_reader :age
+
+  def initialize(input_options)
+    super
+    @age = input_options[:age]
+  end
+end
+
+bicycle1 = Bicycle.new(color: "green", size: "large", style: "road", tire_width: "25", price: 500)
+
 
 p bicycle1.color
 p bicycle1.price
 p bicycle1.style
 p bicycle1.show_info
+
+bicycle2 = Used_Bicycle.new(color: "blue", size: "small", style: "mountain", tire_width: "40", price: 100, age: 4)
+
+p bicycle2.age
