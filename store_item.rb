@@ -69,7 +69,6 @@ class Bicycle
   def show_info
     "This is a #{@size}, #{@color}, #{style} bike with #{tire_width} mm tires and costs $#{price}."
   end
-
 end
 
 bicycle1 = Bicycle.new("green", "large", "road", "25", 500)
