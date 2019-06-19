@@ -62,3 +62,5 @@ manager.give_all_raises
 p manager.employees
 manager.fire_all_employees
 p manager.employees
+
+# if you were to create a method that is the same in both the Manger and Employee method, the Manager method would take precedence because it is "newer".
