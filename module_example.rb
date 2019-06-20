@@ -35,7 +35,7 @@ class Car < Vehicle
   include HornHonkable
 end
 
-class Bike
+class Bike < Vehicle
 
   include BellRingable
 end
