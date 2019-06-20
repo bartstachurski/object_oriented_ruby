@@ -1,22 +1,5 @@
 
-module BellRingable
-  def ring_bell
-    p "Ring ring!"
-  end
-end
-
-module HornHonkable
-  def honk_horn
-    p "Beeeeeeep!"
-  end
-end
-
-class Vehicle
-  def initialize
-    @speed = 0
-    @direction = 'north'
-  end
-
+module Movable
   def brake
     @speed = 0
   end
@@ -28,15 +11,34 @@ class Vehicle
   def turn(new_direction)
     @direction = new_direction
   end
-end  
+end
 
-class Car < Vehicle
+module BellRingable
+  def ring_bell
+    p "Ring ring!"
+  end
+end
 
+module HornHonkable
+  def honk_horn
+    p "Beeeeeeep!"
+  end
+end
+  
+
+class Car
+  def initialize
+    @speed = 0
+    @direction = 'north'
+  end
   include HornHonkable
 end
 
-class Bike < Vehicle
-
+class Bike
+  def initialize
+    @speed = 0
+    @direction = 'north'
+  end
   include BellRingable
 end
 
