@@ -23,6 +23,8 @@ class Employee
 end
 
 employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
+# in Ruby you don't need the hash here when initializing
+# you can even remove the parantheses, although most people would leave them.
 employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
 employee1.print_info
 employee2.print_info
